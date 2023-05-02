@@ -27,6 +27,7 @@ public class Target : MonoBehaviour
         transform.position = RandomSpawnPos();
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     Vector3 RandomForce()
@@ -63,6 +64,9 @@ public class Target : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        if (!gameObject.CompareTag("Bad")) { gameManager.GameOver(); }
+        if (!gameObject.CompareTag("Bad"))
+        {
+
+        }      
     }
 }
